@@ -6,6 +6,7 @@
 
 using System;
 using System.Collections.Generic;
+using System.Threading.Tasks;
 
 namespace Full_GRASP_And_SOLID
 {
@@ -13,6 +14,9 @@ namespace Full_GRASP_And_SOLID
     {
         // Cambiado por OCP
         private IList<BaseStep> steps = new List<BaseStep>();
+        public bool ya_se_empezo = false;
+        public bool ya_está_cocinado { get;  private set; } = false;
+        
 
         public Product FinalProduct { get; set; }
 
@@ -57,10 +61,11 @@ namespace Full_GRASP_And_SOLID
 
             foreach (BaseStep step in this.steps)
             {
-                result = result + step.GetStepCost();
+                result =+ step.GetStepCost();
             }
 
             return result;
         }
+        
     }
 }
