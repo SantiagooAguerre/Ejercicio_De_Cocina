@@ -14,10 +14,8 @@ namespace Full_GRASP_And_SOLID
     {
         // Cambiado por OCP
         private IList<BaseStep> steps = new List<BaseStep>();
-        public bool enProceso = false;
-        public bool Cocinadito { get;  private set; } = false;
-        
-        
+        public bool enProceso;
+        public bool Cocinadito { get;  private set; }
 
         public Product FinalProduct { get; set; }
 
@@ -77,10 +75,12 @@ namespace Full_GRASP_And_SOLID
             }
             return counter;
         }
+        
         public void CoccionTrue()
         {
             Cocinadito = true;
         }
+        
         public async void Coccion()
         {
             int tiempo_de_coccion = SaberTiempoCoccion();
@@ -92,7 +92,6 @@ namespace Full_GRASP_And_SOLID
             enProceso = true;
             TemporizadorDeCoccion tempo = new TemporizadorDeCoccion(this);
             tempo.TimeOut();
-            
         }
     }
 }
