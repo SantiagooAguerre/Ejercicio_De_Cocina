@@ -1,18 +1,14 @@
 namespace Full_GRASP_And_SOLID;
 
-using System.Threading;
-
 public class TemporizadorDeCoccion : TimerClient
 {
     private Recipe receta;
-
-    public TemporizadorDeCoccion(Recipe receta)
+    public TemporizadorDeCoccion(Recipe recipe)
     {
-        this.receta = receta;
+        this.receta = recipe;
     }
-
     public void TimeOut()
     {
-        receta.Set_De_YaEstáCocinado();
+        receta.CoccionTrue();
     }
 }

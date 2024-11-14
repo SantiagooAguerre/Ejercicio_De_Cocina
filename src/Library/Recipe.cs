@@ -14,8 +14,9 @@ namespace Full_GRASP_And_SOLID
     {
         // Cambiado por OCP
         private IList<BaseStep> steps = new List<BaseStep>();
-        public bool ya_se_empezo = false;
-        public bool ya_está_cocinado { get;  private set; } = false;
+        public bool enProceso = false;
+        public bool Cocinadito { get;  private set; } = false;
+        
         
 
         public Product FinalProduct { get; set; }
@@ -67,5 +68,31 @@ namespace Full_GRASP_And_SOLID
             return result;
         }
         
+        public int SaberTiempoCoccion()
+        {
+            int counter = 0;
+            foreach (var step in steps)
+            {
+                counter += step.Time;
+            }
+            return counter;
+        }
+        public void CoccionTrue()
+        {
+            Cocinadito = true;
+        }
+        public async void Coccion()
+        {
+            int tiempo_de_coccion = SaberTiempoCoccion();
+            if (enProceso)
+            {
+                throw new InvalidOperationException("Ya se encuentra esa receta en produccion");
+            }
+            await Task.Delay(tiempo_de_coccion);
+            enProceso = true;
+            TemporizadorDeCoccion tempo = new TemporizadorDeCoccion(this);
+            tempo.TimeOut();
+            
+        }
     }
 }
