@@ -84,6 +84,7 @@ namespace Full_GRASP_And_SOLID
             return counter;
         }
         
+        // Método para marcar la receta como cocinada al completar el proceso de cocción
         public void CoccionTrue()
         {
             Cocinadito = true;
