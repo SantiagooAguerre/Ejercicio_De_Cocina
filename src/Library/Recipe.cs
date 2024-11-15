@@ -15,8 +15,9 @@ namespace Full_GRASP_And_SOLID
     {
         // Lista de pasos de la receta, utiliza el tipo BaseStep para cumplir con el Principio de Abierto/Cerrado (OCP)
         private IList<BaseStep> steps = new List<BaseStep>();
-        public bool enProceso;
-        public bool Cocinadito { get;  private set; }
+        // Variables para controlar el estado de la cocción
+        public bool enProceso; // Indica si la receta ya está en proceso de cocción
+        public bool Cocinadito { get; private set; } // Indica si la receta ya ha terminado de cocinarse
 
         public Product FinalProduct { get; set; }
 
