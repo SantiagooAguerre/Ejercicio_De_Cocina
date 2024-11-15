@@ -67,7 +67,7 @@ namespace Full_GRASP_And_SOLID
 
             foreach (BaseStep step in this.steps)
             {
-                result =+ step.GetStepCost();
+                result =+ step.GetStepCost();// Suma el costo de cada paso
             }
 
             return result;
