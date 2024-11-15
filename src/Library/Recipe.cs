@@ -72,7 +72,8 @@ namespace Full_GRASP_And_SOLID
 
             return result;
         }
-        
+
+        // Método para calcular el tiempo total de cocción de todos los pasos de la receta
         public int SaberTiempoCoccion()
         {
             int counter = 0;
