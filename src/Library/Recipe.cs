@@ -19,8 +19,8 @@ namespace Full_GRASP_And_SOLID
         public bool enProceso; // Indica si la receta ya está en proceso de cocción
         public bool Cocinadito { get; private set; } // Indica si la receta ya ha terminado de cocinarse
 
+        // Producto final que se obtiene al completar la receta
         public Product FinalProduct { get; set; }
-
         // Agregado por Creator
         public void AddStep(Product input, double quantity, Equipment equipment, int time)
         {
