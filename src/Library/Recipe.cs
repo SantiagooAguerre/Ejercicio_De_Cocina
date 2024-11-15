@@ -22,8 +22,8 @@ namespace Full_GRASP_And_SOLID
         // Producto final que se obtiene al completar la receta
         public Product FinalProduct { get; set; }
         // Agregado por Creator
-        public void AddStep(Product input, double quantity, Equipment equipment, int time)
-        {
+        // Método para agregar un paso de tipo Step (que involucra ingredientes y equipo) a la receta
+        public void AddStep(Product input, double quantity, Equipment equipment, int time)        {
             Step step = new Step(input, quantity, equipment, time);
             this.steps.Add(step);
         }
