@@ -13,7 +13,7 @@ namespace Full_GRASP_And_SOLID
     // La clase Recipe implementa la interfaz IRecipeContent, cumpliendo con el Principio de Inversión de Dependencias (DIP)
     public class Recipe : IRecipeContent
     {
-        // Cambiado por OCP
+        // Lista de pasos de la receta, utiliza el tipo BaseStep para cumplir con el Principio de Abierto/Cerrado (OCP)
         private IList<BaseStep> steps = new List<BaseStep>();
         public bool enProceso;
         public bool Cocinadito { get;  private set; }
