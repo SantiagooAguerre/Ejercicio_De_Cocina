@@ -35,8 +35,8 @@ namespace Full_GRASP_And_SOLID
             this.steps.Add(step);
         }
 
-        public void RemoveStep(BaseStep step)
-        {
+        // Método para eliminar un paso específico de la receta
+        public void RemoveStep(BaseStep step)        {
             this.steps.Remove(step);
         }
 
