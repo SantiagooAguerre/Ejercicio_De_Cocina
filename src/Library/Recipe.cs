@@ -79,7 +79,7 @@ namespace Full_GRASP_And_SOLID
             int counter = 0;
             foreach (var step in steps)
             {
-                counter += step.Time;
+                counter += step.Time; // Suma el tiempo de cada paso
             }
             return counter;
         }
