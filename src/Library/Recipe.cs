@@ -29,8 +29,8 @@ namespace Full_GRASP_And_SOLID
         }
 
         // Agregado por OCP y Creator
-        public void AddStep(string description, int time)
-        {
+        // Método sobrecargado para agregar un paso de espera (sin equipo o ingredientes)
+        public void AddStep(string description, int time)        {
             WaitStep step = new WaitStep(description, time);
             this.steps.Add(step);
         }
