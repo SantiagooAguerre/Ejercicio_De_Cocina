@@ -59,6 +59,8 @@ namespace Full_GRASP_And_SOLID
         }
 
         // Agregado por Expert
+        // Calcula el costo de producción de la receta sumando el costo de cada paso
+
         public double GetProductionCost()
         {
             double result = 0;
