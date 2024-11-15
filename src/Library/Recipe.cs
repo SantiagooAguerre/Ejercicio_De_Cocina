@@ -93,7 +93,7 @@ namespace Full_GRASP_And_SOLID
         // Método asíncrono para iniciar el proceso de cocción de la receta
         public async void Coccion()
         {
-            int tiempo_de_coccion = SaberTiempoCoccion();
+            int tiempo_de_coccion = SaberTiempoCoccion(); // Obtiene el tiempo total de cocción
             if (enProceso)
             {
                 throw new InvalidOperationException("Ya se encuentra esa receta en produccion");
