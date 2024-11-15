@@ -52,6 +52,7 @@ namespace Full_GRASP_And_SOLID
             }
 
             // Agregado por Expert
+            // Agrega el costo de producción total al final del texto
             result = result + $"Costo de producción: {this.GetProductionCost()}";
 
             return result;
