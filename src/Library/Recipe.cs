@@ -90,6 +90,7 @@ namespace Full_GRASP_And_SOLID
             Cocinadito = true;
         }
         
+        // Método asíncrono para iniciar el proceso de cocción de la receta
         public async void Coccion()
         {
             int tiempo_de_coccion = SaberTiempoCoccion();
