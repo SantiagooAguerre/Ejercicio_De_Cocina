@@ -41,6 +41,8 @@ namespace Full_GRASP_And_SOLID
         }
 
         // Agregado por SRP
+        // Método que genera el texto a imprimir para la receta completa
+
         public string GetTextToPrint()
         {
             string result = $"Receta de {this.FinalProduct.Description}:\n";
