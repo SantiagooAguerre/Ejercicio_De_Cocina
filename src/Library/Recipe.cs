@@ -10,7 +10,8 @@ using System.Threading.Tasks;
 
 namespace Full_GRASP_And_SOLID
 {
-    public class Recipe : IRecipeContent // Modificado por DIP
+    // La clase Recipe implementa la interfaz IRecipeContent, cumpliendo con el Principio de Inversión de Dependencias (DIP)
+    public class Recipe : IRecipeContent
     {
         // Cambiado por OCP
         private IList<BaseStep> steps = new List<BaseStep>();
