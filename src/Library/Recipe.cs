@@ -96,6 +96,7 @@ namespace Full_GRASP_And_SOLID
             int tiempo_de_coccion = SaberTiempoCoccion(); // Obtiene el tiempo total de cocción
             if (enProceso)
             {
+                // Si la receta ya está en proceso de cocción, lanza una excepción
                 throw new InvalidOperationException("Ya se encuentra esa receta en produccion");
             }
             await Task.Delay(tiempo_de_coccion);
