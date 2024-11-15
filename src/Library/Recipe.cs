@@ -99,10 +99,10 @@ namespace Full_GRASP_And_SOLID
                 // Si la receta ya está en proceso de cocción, lanza una excepción
                 throw new InvalidOperationException("Ya se encuentra esa receta en produccion");
             }
-            await Task.Delay(tiempo_de_coccion);
-            enProceso = true;
-            TemporizadorDeCoccion tempo = new TemporizadorDeCoccion(this);
-            tempo.TimeOut();
+            await Task.Delay(tiempo_de_coccion); // Espera el tiempo de cocción en milisegundos
+            enProceso = true; // Marca la receta como en proceso
+            TemporizadorDeCoccion tempo = new TemporizadorDeCoccion(this); // Crea un temporizador para manejar el tiempo de cocción
+            tempo.TimeOut(); // Llama al método TimeOut para completar la cocción
         }
     }
 }
